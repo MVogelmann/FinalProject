@@ -1,0 +1,87 @@
+body{
+  background-color: rgb(255,255,245);
+}
+div.top-div {
+  height: 100px;
+  border-style: none;
+  border-color: black;
+}
+div.top-div h1 {
+  font-family: calibri, helvetica, sans-serif;
+  color: white;
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  text-shadow: 2px 2px brown;
+}
+#flag {
+  position: relative;
+  max-height:100%;
+  width: 100%;
+  opacity: 0.8;
+}
+/*#bar_blue {
+  background-color: rgb(30, 57, 87);
+  height: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-bottom: 20px;
+}*/
+nav.nav-menu {
+  float: left;
+  width: 220px;
+  height: 1000px;
+  border-right: solid;
+  border-right-width: thick;
+  border-color: rgb(230,155,0);
+  background-color: grey;
+}
+div.nav-tab {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 90%;
+  height: 25px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgb(30, 57, 87);
+}
+div.nav-tab:hover {
+  background-color: rgb(110,115,121);
+}
+a.navigation {
+  text-decoration: none;
+  font-size: large;
+  color: white;
+  font-family: calibri, helvetica, sans-serif;
+  margin-left: 10px;
+}
+
+
+
+div.main-div {
+  margin-left: 20px;
+  float: left;
+  width: 60%;
+  border-style: none;
+  background-color: none;
+  font-family: calibri, helvetica, sans-serif;
+  font-size: large;
+}
+h1 + p::first-letter {
+  font-size: 200%;
+}
+.bold {
+  font-weight: bold;
+}
+div.main-div a {
+  color: black;
+}
+div.div-pic {
+  float:left;
+  width: 35%;
+}
+div.div-pic img {
+  width: 90%;
+}
