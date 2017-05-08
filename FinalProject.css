@@ -98,8 +98,8 @@ a.navigation-sub {
 div.main-div {
   margin-left: 20px;
   float: left;
-  width: 60%;
-  border-style: none;
+  width: 700px;
+  border-style: dotted;
   background-color: none;
   font-family: calibri, helvetica, sans-serif;
   font-size: large;
@@ -109,4 +109,20 @@ h1 + p::first-letter {
 }
 .bold {
   font-weight: bold;
+}
+div.pic_keyword {
+  margin-left: 20px;
+  margin-top: 20px;
+  float: left;
+  width: 250px;
+  height: 250px;
+  border-style: dashed;
+  background-color: lightgrey;
+  text-align: center;
+}
+div.pic_keyword img {
+    vertical-align: middle;
+    border: 0 none;
+    max-height: 200px;
+    overflow: hidden;
 }
