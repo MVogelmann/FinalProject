@@ -12,23 +12,24 @@ div.top-div {
 }
 div.heading {
   height: 100%;
-  width: 400px;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
-  background-color: blue;
+  /*background-color: white;
+  opacity: 0.5;*/
 }
 div.top-div h1 {
   text-align: center;
   margin-top: auto;
-  font-size: 30pt;
+  font-size: 50pt;
   font-weight: bold;
   font-family: 'Great Vibes', calibri, helvetica, sans-serif;
-  line-height: 0.7;
+  line-height: 1.8;
   color: white;
   text-shadow: 2px 2px brown;
 }
 div.top-div span{
-  font-size: 17pt;
+  font-size: 25pt;
 }
 /*#flag {
   position: relative;
@@ -49,7 +50,7 @@ nav.nav-menu {
 div.nav-tab {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 12px;
   width: 90%;
   height: 30px;
   box-sizing: border-box;
@@ -60,6 +61,23 @@ div.nav-tab {
 }
 div.nav-tab:hover {
   background-color: black;
+  text-decoration: none;
+}
+div.nav-tab-sub {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  width: 50%;
+  height: 25px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 5px 5px;
+  background-color: darkred;
+  border-style: ridge;
+  border-color: rgb(230,155,0);
+}
+div.nav-tab-sub:hover {
+  background-color: black;
+  text-decoration: none;
 }
 a.navigation {
   text-decoration: none;
@@ -68,7 +86,13 @@ a.navigation {
   font-family: calibri, helvetica, sans-serif;
   margin-left: 10px;
 }
-
+a.navigation-sub {
+  text-decoration: none;
+  font-size: medium;
+  color: white;
+  font-family: calibri, helvetica, sans-serif;
+  margin-left: 10px;
+}
 
 /*------------------------ Main div -----------------------*/
 div.main-div {
@@ -85,14 +109,4 @@ h1 + p::first-letter {
 }
 .bold {
   font-weight: bold;
-}
-div.main-div a {
-  color: black;
-}
-div.div-pic {
-  float:left;
-  width: 35%;
-}
-div.div-pic img {
-  width: 90%;
 }
