@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--Courtesy of fonts.google.com -->
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="FinalProject.js"></script>
   </head>
 
-  <body>
+  <body onload="randPics()">
     <div class="top-div">
       <div class="heading">
         <h1>
@@ -44,22 +45,60 @@
     <div class="main-div">
       <h1>The first step is always the hardest...</h1>
       <p>
-        Which of these is <span id="keyword1_1">"a man"</span>?
+        Which of these is "<span id="keyword1_1"></span>"?
       </p>
       <div class="pic_keyword">
-        <img
-          src="https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
+        <!--Picture: Courtesy of pixabay.com -->
+        <img id="pic_lo"
+          src=""
           alt="Woman portrait">
-        <p id="keyword_lo">"Die Frau"</p>
+        <div class="radio">
+          <label>
+            <input type="radio" id="radioWoman" name="answer">
+            <span id="description_lo"></span>
+          </label>
+        </div>
       </div>
       <div class="pic_keyword">
-
+        <!--Picture: Courtesy of pixabay.com -->
+        <img id="pic_ro"
+          src=""
+          alt="Woman portrait">
+        <div class="radio">
+          <label>
+            <input type="radio" id="radioMan" name="answer">
+            <span id="description_ro"></span>
+          </label>
+        </div>
       </div>
       <div class="pic_keyword">
-
+        <!--Picture: Courtesy of pixabay.com -->
+        <img id="pic_lu"
+          src=""
+          alt="Woman portrait">
+        <div class="radio">
+          <label>
+            <input type="radio" id="radioBoy" name="answer">
+            <span id="description_lu"></span>
+          </label>
+        </div>
       </div>
       <div class="pic_keyword">
-
+        <!--Picture: Courtesy of pixabay.com -->
+        <img id="pic_ru"
+          src=""
+          alt="Woman portrait">
+        <div class="radio">
+          <label>
+            <input type="radio" id="radioGirl" name="answer">
+            <span id="description_ru"></span>
+          </label>
+        </div>
+      </div>
+      <div class="checkButton">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer()">
+          Check Answer
+        </button>
       </div>
     </div>
   </body>

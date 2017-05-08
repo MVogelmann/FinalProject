@@ -99,7 +99,7 @@ div.main-div {
   margin-left: 20px;
   float: left;
   width: 700px;
-  border-style: dotted;
+  border-style: none;
   background-color: none;
   font-family: calibri, helvetica, sans-serif;
   font-size: large;
@@ -112,17 +112,23 @@ h1 + p::first-letter {
 }
 div.pic_keyword {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   float: left;
   width: 250px;
   height: 250px;
-  border-style: dashed;
+  overflow: hidden;
+  border-style: solid;
+  border-color: darkgrey;
   background-color: lightgrey;
   text-align: center;
 }
 div.pic_keyword img {
     vertical-align: middle;
     border: 0 none;
-    max-height: 200px;
-    overflow: hidden;
+    max-height: 210px;
+}
+div.checkButton {
+  margin-top: 200px;
+  margin-left: 225px;
+  clear: left;
 }
