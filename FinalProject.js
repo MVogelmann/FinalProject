@@ -1,33 +1,43 @@
+var indexKeyword;
+var randIndeces;
+var PicturesArray = [
+  {description: '"Die Frau"',
+   descriptionENG: '"the woman"',
+   picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
+  },
+  {description: '"Der Mann"',
+   descriptionENG: '"the man"',
+   picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
+  },
+  {description: '"Der Junge"',
+   descriptionENG: '"the boy"',
+   picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
+  },
+  {description: '"Das Mädchen"',
+   descriptionENG: '"the girl"',
+   picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
+ }
+];
+
 function randPics()
 {
-  var PicturesArray = [
-    {description: '"Die Frau"',
-     picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
-    },
-    {description: '"Der Mann"',
-     picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
-    },
-    {description: '"Der Junge"',
-     picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
-    },
-    {description: '"Das Mädchen"',
-     picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
-   }
-  ];
-  var randIndeces = randIndArray(PicturesArray.length);
-  document.getElementById("pic_lo").src = PicturesArray[randIndeces[0]].picture;
-  document.getElementById("description_lo").innerHTML = PicturesArray[randIndeces[0]].description;
-  document.getElementById("pic_ro").src = PicturesArray[randIndeces[1]].picture;
-  document.getElementById("description_ro").innerHTML = PicturesArray[randIndeces[1]].description;
-  document.getElementById("pic_lu").src = PicturesArray[randIndeces[2]].picture;
-  document.getElementById("description_lu").innerHTML = PicturesArray[randIndeces[2]].description;
-  document.getElementById("pic_ru").src = PicturesArray[randIndeces[3]].picture;
-  document.getElementById("description_ru").innerHTML = PicturesArray[randIndeces[3]].description;
+  //put random pictures at random positions
+  var length = PicturesArray.length;
+  randIndeces = randIndArray(length);
+  document.getElementById("pic_0").src = PicturesArray[randIndeces[0]].picture;  //use for loop?
+  document.getElementById("description_0").innerHTML = PicturesArray[randIndeces[0]].description;
+  document.getElementById("pic_1").src = PicturesArray[randIndeces[1]].picture;
+  document.getElementById("description_1").innerHTML = PicturesArray[randIndeces[1]].description;
+  document.getElementById("pic_2").src = PicturesArray[randIndeces[2]].picture;
+  document.getElementById("description_2").innerHTML = PicturesArray[randIndeces[2]].description;
+  document.getElementById("pic_3").src = PicturesArray[randIndeces[3]].picture;
+  document.getElementById("description_3").innerHTML = PicturesArray[randIndeces[3]].description;
 
-  var keywordsArray = ["the man", "the woman", "the boy", "the girl"]
-  var arrayLength = keywordsArray.length;
-  var randIndex = Math.floor(Math.random() * (arrayLength));
-  document.getElementById("keyword1_1").innerHTML = keywordsArray[randIndex];
+  //determine a random keyword which the user has to find
+  var keyword;
+  indexKeyword = Math.floor(Math.random() * (length));
+  keyword = PicturesArray[indexKeyword].descriptionENG;
+  document.getElementById("keyword1_1").innerHTML = keyword;
 }
 
 function randIndArray (length)  //creates an array with UNIQUE random numbers 0 to length
@@ -47,9 +57,17 @@ function randIndArray (length)  //creates an array with UNIQUE random numbers 0 
 
 function checkAnswer()
 {
+  var answerID;
   var answer;
-  var keyword;
-  keyword = document.getElementById("keyword1_1").innerHTML;
-  answer = document.getElementById("radioMan").checked;
-  console.log(answer + keyword);
+  var pictureIndex = randIndeces.indexOf(indexKeyword);
+  answerID = "radio_" + pictureIndex;
+  answer = document.getElementById(answerID).checked;
+  if (answer)
+  {
+    console.log("Correct!!");
+  }
+  else
+  {
+    console.log("Nope");
+  }
 }
