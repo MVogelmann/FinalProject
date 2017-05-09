@@ -3,7 +3,7 @@
 
 <html>
   <head>
-    <title>German 101 - Home</title>
+    <title>German 101 - Level 1</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="Finalproject.css">
     <!--Courtesy of bootstrap.com -->
@@ -13,7 +13,7 @@
     <script type="text/javascript" src="FinalProject.js"></script>
   </head>
 
-  <body onload="randPics()">
+  <body onload="BuildCourse1()">
     <div class="top-div">
       <div class="heading">
         <h1>
@@ -32,10 +32,10 @@
         <a class="navigation-sub" href="Course1.html">&#9655; Level 1</a>
       </div>
       <div class="nav-tab-sub">
-        <a class="navigation-sub" href="Course2.html">Level 2</a>
+        <a class="navigation-sub" href="">Level 2</a>
       </div>
       <div class="nav-tab-sub">
-        <a class="navigation-sub" href="Course3.html">Level 3</a>
+        <a class="navigation-sub" href="">Level 3</a>
       </div>
       <div class="nav-tab">
         <a class="navigation" href="Vocabular.html">Vocabular Trainer</a>
@@ -99,17 +99,17 @@
         </div>
       </div>
       <div class="checkButton" id="checkAnswerButton">
-        <button type="button" class="btn btn-primary" onclick="checkAnswer()">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer(1)">
           Check Answer
         </button>
       </div>
       <div class="checkButton" id="continueButton">
-        <button type="button" class="btn btn-primary" onclick="Continue()">
+        <button type="button" class="btn btn-primary" onclick="Continue(2)">
           Continue
         </button>
       </div>
       <div class="checkButton" id="tryAgainButton">
-        <button type="button" class="btn btn-primary" onclick="TryAgain()">
+        <button type="button" class="btn btn-primary" onclick="TryAgain(1)">
           Try again
         </button>
       </div>

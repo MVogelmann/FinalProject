@@ -1,23 +1,73 @@
 var indexKeyword;
 var randIndeces;
-var PicturesArray = [
-  {description: '"Die Frau"',
-   descriptionENG: '"the woman"',
-   picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
-  },
-  {description: '"Der Mann"',
-   descriptionENG: '"the man"',
-   picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
-  },
-  {description: '"Der Junge"',
-   descriptionENG: '"the boy"',
-   picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
-  },
-  {description: '"Das Mädchen"',
-   descriptionENG: '"the girl"',
-   picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
- }
-];
+var PicturesArray = [];
+
+function BuildCourse1()
+{
+  PicturesArray = [
+    {description: '"Die Frau"',
+     descriptionENG: '"the woman"',
+     picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
+    },
+    {description: '"Der Mann"',
+     descriptionENG: '"the man"',
+     picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
+    },
+    {description: '"Der Junge"',
+     descriptionENG: '"the boy"',
+     picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
+    },
+    {description: '"Das Mädchen"',
+     descriptionENG: '"the girl"',
+     picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
+   }
+  ];
+  randPics();
+}
+function BuildCourse2()
+{
+  PicturesArray = [
+    {description: '"Die büxx"',
+     descriptionENG: '"the woman"',
+     picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
+    },
+    {description: '"Der Mann"',
+     descriptionENG: '"the man"',
+     picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
+    },
+    {description: '"Der Junge"',
+     descriptionENG: '"the boy"',
+     picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
+    },
+    {description: '"Das Mädchen"',
+     descriptionENG: '"the girl"',
+     picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
+   }
+  ];
+  randPics();
+}
+function BuildCourse3()
+{
+  PicturesArray = [
+    {description: '"Die Frau"',
+     descriptionENG: '"the woman"',
+     picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
+    },
+    {description: '"Der Mann"',
+     descriptionENG: '"the man"',
+     picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
+    },
+    {description: '"Der Junge"',
+     descriptionENG: '"the boy"',
+     picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
+    },
+    {description: '"Das Mädchen"',
+     descriptionENG: '"the girl"',
+     picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
+   }
+  ];
+  randPics();
+}
 
 function randPics()
 {
@@ -55,7 +105,7 @@ function randIndArray (length)  //creates an array with UNIQUE random numbers 0 
   return randArray;
 }
 
-function checkAnswer()
+function checkAnswer(level)
 {
   var answerID;
   var answer;
@@ -69,7 +119,7 @@ function checkAnswer()
     document.getElementById("continueButton").style.visibility = "visible";
     document.getElementById("resultMessage").innerHTML = "Correct";
     document.getElementById("resultMessage").style.color = "green";
-    setCookie("course1", true, 9);
+    setCookie("course" + level, true, 9);
   }
   else
   {
@@ -78,15 +128,18 @@ function checkAnswer()
     document.getElementById("tryAgainButton").style.visibility = "visible";
     document.getElementById("resultMessage").innerHTML = "Wrong";
     document.getElementById("resultMessage").style.color = "red";
-    setCookie("course1", false, 9);
+    setCookie("course" + level, false, 9);
   }
 }
 
-function Continue(){
-  window.location = "course2.html"
+function Continue(level)
+{
+  window.location = "course" + level + ".html";
 }
-function TryAgain(){
-  window.location = "course1.html"
+
+function TryAgain(level)
+{
+  window.location = "course" + level + ".html";
 }
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp

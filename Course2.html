@@ -3,14 +3,17 @@
 
 <html>
   <head>
-    <title>German 101 - Home</title>
+    <title>German 101 - Level 2</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="Finalproject.css">
+    <!--Courtesy of bootstrap.com -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <!--Courtesy of fonts.google.com -->
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="FinalProject.js"></script>
   </head>
 
-  <body>
+  <body onload="BuildCourse2()">
     <div class="top-div">
       <div class="heading">
         <h1>
@@ -20,19 +23,19 @@
     </div>
     <nav class="nav-menu">
       <div class="nav-tab">
-        <a class="navigation" href="index.html">&#9655; Home</a>
+        <a class="navigation" href="index.html">Home</a>
       </div>
       <div class="nav-tab">
-        <a class="navigation" href="Course_main.html">German Course</a>
+        <a class="navigation" href="Course_main.html">&#9655; German Course</a>
       </div>
       <div class="nav-tab-sub">
         <a class="navigation-sub" href="Course1.html">Level 1</a>
       </div>
       <div class="nav-tab-sub">
-        <a class="navigation-sub" href="Course2.html">Level 2</a>
+        <a class="navigation-sub" href="Course2.html">&#9655; Level 2</a>
       </div>
       <div class="nav-tab-sub">
-        <a class="navigation-sub" href="Course3.html">Level 3</a>
+        <a class="navigation-sub" href="">Level 3</a>
       </div>
       <div class="nav-tab">
         <a class="navigation" href="Vocabular.html">Vocabular Trainer</a>
@@ -40,22 +43,76 @@
     </nav>
 
     <div class="main-div">
-      <h1>Home</h1>
-      <p>
-        This website is developped to arouse the reader's interest in
-        the German language. Of course the reader will not be able to speak
-        German fluently after visiting this site, but hopefully he will be able
-        to get the basics.<br><br>
-        The interactive Course is divided into three sections. The reader has to
-        finish the lower section before starting a higher section. <br>
-        Additional to the German Course there is a vocabular trainer available
-        to learn some basic important words.<br><br>
-        And now, start the
-          <a href="Course_1.html">Course</a>
-        or the
-          <a href="Course_1.html">Vocabular Trainer</a>
-        !
-      </p>
+      <h1>Level 2</h1>
+      <span id="resultMessage"></span>
+      <div id="container">
+        <p>
+          Which of these is <span id="keyword1_1"></span>?
+        </p>
+        <div class="pic_keyword">
+          <!--Picture: Courtesy of pixabay.com -->
+          <img id="pic_0"
+            src=""
+            alt="Woman portrait">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio_0" name="answer">
+              <span id="description_0"></span>
+            </label>
+          </div>
+        </div>
+        <div class="pic_keyword">
+          <!--Picture: Courtesy of pixabay.com -->
+          <img id="pic_1"
+            src=""
+            alt="Woman portrait">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio_1" name="answer">
+              <span id="description_1"></span>
+            </label>
+          </div>
+        </div>
+        <div class="pic_keyword">
+          <!--Picture: Courtesy of pixabay.com -->
+          <img id="pic_2"
+            src=""
+            alt="Woman portrait">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio_2" name="answer">
+              <span id="description_2"></span>
+            </label>
+          </div>
+        </div>
+        <div class="pic_keyword">
+          <!--Picture: Courtesy of pixabay.com -->
+          <img id="pic_3"
+            src=""
+            alt="Woman portrait">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio_3" name="answer">
+              <span id="description_3"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="checkButton" id="checkAnswerButton">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer()">
+          Check Answer
+        </button>
+      </div>
+      <div class="checkButton" id="continueButton">
+        <button type="button" class="btn btn-primary" onclick="Continue()">
+          Continue
+        </button>
+      </div>
+      <div class="checkButton" id="tryAgainButton">
+        <button type="button" class="btn btn-primary" onclick="TryAgain()">
+          Try again
+        </button>
+      </div>
     </div>
   </body>
 </html>
