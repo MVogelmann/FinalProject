@@ -104,6 +104,18 @@ div.main-div {
   font-family: calibri, helvetica, sans-serif;
   font-size: large;
 }
+div.container {
+  width: 100%;
+  visibility: visible;
+}
+#resultMessage {
+  font-size: 300%;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 550px;
+  margin-left: 20px;
+  text-align: center;
+}
 h1 + p::first-letter {
   font-size: 200%;
 }
@@ -128,7 +140,14 @@ div.pic_keyword img {
     max-height: 210px;
 }
 div.checkButton {
-  margin-top: 200px;
+  position: absolute;
+  margin-top: 540px;
   margin-left: 225px;
   clear: left;
+}
+#continueButton {
+  visibility: hidden;
+}
+#tryAgainButton {
+  visibility: hidden;
 }

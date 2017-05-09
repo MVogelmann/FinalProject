@@ -64,10 +64,50 @@ function checkAnswer()
   answer = document.getElementById(answerID).checked;
   if (answer)
   {
-    console.log("Correct!!");
+    document.getElementById("container").style.opacity = '0.5';
+    document.getElementById("checkAnswerButton").style.visibility = "hidden";
+    document.getElementById("continueButton").style.visibility = "visible";
+    document.getElementById("resultMessage").innerHTML = "Correct";
+    document.getElementById("resultMessage").style.color = "green";
+    setCookie("course1", true, 9);
   }
   else
   {
-    console.log("Nope");
+    document.getElementById("container").style.opacity = '0.5';
+    document.getElementById("checkAnswerButton").style.visibility = "hidden";
+    document.getElementById("tryAgainButton").style.visibility = "visible";
+    document.getElementById("resultMessage").innerHTML = "Wrong";
+    document.getElementById("resultMessage").style.color = "red";
+    setCookie("course1", false, 9);
   }
+}
+
+function Continue(){
+  window.location = "course2.html"
+}
+function TryAgain(){
+  window.location = "course1.html"
+}
+
+//courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+//courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
