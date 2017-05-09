@@ -3,16 +3,17 @@
 
 <html>
   <head>
-    <title>German 101 - Home</title>
+    <title>German 101</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="Finalproject.css">
     <!--Courtesy of bootstrap.com -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--Courtesy of fonts.google.com -->
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="FinalProject.js"></script>
   </head>
 
-  <body>
+  <body onload="appearanceCourseMain()">
     <div class="top-div">
       <div class="heading">
         <h1>
@@ -41,8 +42,20 @@
       </div>
     </nav>
 
-    <div class="main-div">
+    <div class="main-div" id="divBeforeTest">
       <h1>Welcome to German 101!</h1>
+      <p>
+        If you are visiting this site for the first time, please start the Course
+        with Level 1. <br><br>
+        Please Note that the Course uses Cookies and JavaScript, your browser
+        must allow both.<br><br>
+        And now, start the Course with
+          <a href="Course1.html">Level 1</a>
+        !
+      </p>
+    </div>
+    <div class="main-div" id="divAfterTest">
+      <h1 id="resultHeader">blah</h1>
       <p>
         If you are visiting this site for the first time, please start the Course
         with Level 1. <br><br>

@@ -119,7 +119,7 @@ function checkAnswer(level)
     document.getElementById("continueButton").style.visibility = "visible";
     document.getElementById("resultMessage").innerHTML = "Correct";
     document.getElementById("resultMessage").style.color = "green";
-    setCookie("course" + level, true, 9);
+    setCookie("course" + level, 1, 9);
   }
   else
   {
@@ -128,7 +128,7 @@ function checkAnswer(level)
     document.getElementById("tryAgainButton").style.visibility = "visible";
     document.getElementById("resultMessage").innerHTML = "Wrong";
     document.getElementById("resultMessage").style.color = "red";
-    setCookie("course" + level, false, 9);
+    setCookie("course" + level, 0, 9);
   }
 }
 
@@ -142,6 +142,29 @@ function TryAgain(level)
   window.location = "course" + level + ".html";
 }
 
+function appearanceCourseMain()
+{
+  var result1 = getCookie("course1");
+  var result2 = getCookie("course2");
+  var result3 = getCookie("course3");
+
+  console.log(result1);
+  console.log(result2);
+  console.log(result3);
+  if (result1 && result2 && result3)
+  {
+    console.log("all cookies true");
+      setCookie("course1", false, 9);
+      setCookie("course2", false, 9);
+      setCookie("course3", false, 9);
+      document.getElementById("divAfterTest").style.visibility = "visible";
+      document.getElementById("divBeforeTest").style.visibility = "hidden";
+  }
+  else {
+    console.log("else zweig");
+  }
+
+}
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();

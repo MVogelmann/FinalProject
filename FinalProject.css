@@ -96,13 +96,17 @@ a.navigation-sub {
 
 /*------------------------ Main div -----------------------*/
 div.main-div {
-  margin-left: 20px;
+  position: absolute;
+  margin-left: 240px;
   float: left;
   width: 700px;
   border-style: none;
   background-color: none;
   font-family: calibri, helvetica, sans-serif;
   font-size: large;
+}
+#divAfterTest {
+  visibility: hidden;
 }
 div.container {
   width: 100%;
