@@ -1,3 +1,4 @@
+//--------------------------- Global variables ---------------------------------
 var indexKeyword;
 var randIndeces;
 var PicturesArray = [];
@@ -69,6 +70,7 @@ function BuildCourse3()
   randPics();
 }
 
+//--------------------------- Functions Course ---------------------------------
 function randPics()
 {
   //put random pictures at random positions
@@ -88,21 +90,6 @@ function randPics()
   indexKeyword = Math.floor(Math.random() * (length));
   keyword = PicturesArray[indexKeyword].descriptionENG;
   document.getElementById("keyword1_1").innerHTML = keyword;
-}
-
-function randIndArray (length)  //creates an array with UNIQUE random numbers 0 to length
-{
-  var newIndex = 0;
-  var randArray = [];
-  for (var i = 0; i < length; i++)
-  {
-    do {
-      newIndex = Math.floor(Math.random() * (length));     //Courtesy of W3schools.com
-      randArray[i] = newIndex;
-    }
-    while (randArray.indexOf(newIndex) < i);
-  }
-  return randArray;
 }
 
 function checkAnswer(level)
@@ -161,8 +148,28 @@ function appearanceCourseMain()
     document.getElementById("divBeforeTest").style.visibility = "visible";
     console.log("else zweig");
   }
-
 }
+
+//-------------------------- Functions Vocabular -------------------------------
+
+
+//------------------------------ Subroutines -----------------------------------
+//creates an array with UNIQUE random numbers 0 to length
+function randIndArray (length)
+{
+  var newIndex = 0;
+  var randArray = [];
+  for (var i = 0; i < length; i++)
+  {
+    do {
+      newIndex = Math.floor(Math.random() * (length));     //Courtesy of W3schools.com
+      randArray[i] = newIndex;
+    }
+    while (randArray.indexOf(newIndex) < i);
+  }
+  return randArray;
+}
+
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
