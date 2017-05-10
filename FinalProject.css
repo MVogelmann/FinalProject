@@ -108,6 +108,9 @@ div.main-div {
 #divAfterTest {
   visibility: hidden;
 }
+#divAfterTest h1 {
+  color: green;
+}
 div.container {
   width: 100%;
   visibility: visible;

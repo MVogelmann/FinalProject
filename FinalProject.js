@@ -147,20 +147,18 @@ function appearanceCourseMain()
   var result1 = getCookie("course1");
   var result2 = getCookie("course2");
   var result3 = getCookie("course3");
-
   console.log(result1);
-  console.log(result2);
-  console.log(result3);
-  if (result1 && result2 && result3)
-  {
+  if (result1 == "1" && result2 == "1" && result3 == "1")  {
+    setCookie("course1", 0, 9);
+    setCookie("course2", 0, 9);
+    setCookie("course3", 0, 9);
+    document.getElementById("divAfterTest").style.visibility = "visible";
+    document.getElementById("divBeforeTest").style.visibility = "hidden";
     console.log("all cookies true");
-      setCookie("course1", false, 9);
-      setCookie("course2", false, 9);
-      setCookie("course3", false, 9);
-      document.getElementById("divAfterTest").style.visibility = "visible";
-      document.getElementById("divBeforeTest").style.visibility = "hidden";
   }
   else {
+    document.getElementById("divAfterTest").style.visibility = "hidden";
+    document.getElementById("divBeforeTest").style.visibility = "visible";
     console.log("else zweig");
   }
 
