@@ -13,7 +13,7 @@
     <script type="text/javascript" src="FinalProject.js"></script>
   </head>
 
-  <body onload="appearanceCourseMain()">
+  <body onload="BuildVocabulary()">
     <div class="top-div">
       <div class="heading">
         <h1>
@@ -26,7 +26,7 @@
         <a class="navigation" href="index.html">Home</a>
       </div>
       <div class="nav-tab">
-        <a class="navigation" href="Course_main.html">&#9655; German Course</a>
+        <a class="navigation" href="Course_main.html">German Course</a>
       </div>
       <div class="nav-tab-sub">
         <a class="navigation-sub" href="Course1.html">Level 1</a>
@@ -38,32 +38,34 @@
         <a class="navigation-sub" href="">Level 3</a>
       </div>
       <div class="nav-tab">
-        <a class="navigation" href="Vocabular.html">Vocabular Trainer</a>
+        <a class="navigation" href="Vocabular.html">&#9655; Vocabular Trainer</a>
       </div>
     </nav>
 
     <div class="main-div" id="divBeforeTest">
-      <h1>Welcome to German 101!</h1>
+      <h1>Welcome to the Vocabular Trainer!</h1>
       <p>
-        If you are visiting this site for the first time, please start the Course
-        with Level 1. <br><br>
-        Please Note that the Course uses Cookies and JavaScript, your browser
-        must allow both.<br><br>
-        And now, start the Course with
-          <a href="Course1.html">Level 1</a>
-        !
+        In the German Course levels 1 to 3 you have already learned 12
+        german words. But as our brains are not perfect, you should repeat them
+        regularly.<br><br>
       </p>
-    </div>
-    <div class="main-div" id="divAfterTest">
-      <h1 id="resultHeader">Congratulations!</h1>
-      <p>
-        You successfully completed this German Language Course! <br><br>
-        To strengthen your skills you can either start with
-          <a href="Course1.html">Level 1</a>
-        again, or try the
-          <a href="Course_1.html">Vocabular Trainer</a>
-        .
-      </p>
+      <table>
+        <tr>
+          <th>German word</th>
+          <th>Your English translation</th>
+        </tr>
+        <tr>
+          <td id="GermanVocable"></td>
+          <td>
+            <div class="input-group">
+              <input type="text" class="form-control" id="Translation" placeholder="Your translation...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" onclick="checkAnswer()">Check!</button>
+              </span>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>

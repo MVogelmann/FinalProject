@@ -158,3 +158,16 @@ div.checkButton {
 #tryAgainButton {
   visibility: hidden;
 }
+table {
+  width: 70%;
+}
+th {
+  text-indent: 4px;
+  border-style: groove;
+  background-color: lightgrey;
+}
+td {
+  text-indent: 2px;
+  border-style: groove;
+  background-color: white;
+}

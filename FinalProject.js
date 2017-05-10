@@ -2,8 +2,9 @@
 var indexKeyword;
 var randIndeces;
 var PicturesArray = [];
+var RandomVocableENG
 
-function BuildCourse1()
+function BuildCourse1(x)
 {
   PicturesArray = [
     {description: '"Die Frau"',
@@ -23,9 +24,14 @@ function BuildCourse1()
      picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
    }
   ];
-  randPics();
+  if (x) {
+    return PicturesArray;
+  }
+  else {
+    randPics();     //next step
+  }
 }
-function BuildCourse2()
+function BuildCourse2(x)
 {
   PicturesArray = [
     {description: '"Das Brot"',
@@ -45,9 +51,14 @@ function BuildCourse2()
      picture: "https://cdn.pixabay.com/photo/2016/03/05/23/02/background-1239436__340.jpg"
    }
   ];
-  randPics();
+  if (x) {
+    return PicturesArray;
+  }
+  else {
+    randPics();     //next step
+  }
 }
-function BuildCourse3()
+function BuildCourse3(x)
 {
   PicturesArray = [
     {description: '"Guten Tag"',
@@ -67,7 +78,12 @@ function BuildCourse3()
      picture: "https://cdn.pixabay.com/photo/2016/11/22/18/49/animal-1850002__340.jpg"
    }
   ];
-  randPics();
+  if (x) {
+    return PicturesArray;
+  }
+  else {
+    randPics();     //next step
+  }
 }
 
 //--------------------------- Functions Course ---------------------------------
@@ -76,15 +92,11 @@ function randPics()
   //put random pictures at random positions
   var length = PicturesArray.length;
   randIndeces = randIndArray(length);
-  document.getElementById("pic_0").src = PicturesArray[randIndeces[0]].picture;  //use for loop?
-  document.getElementById("description_0").innerHTML = PicturesArray[randIndeces[0]].description;
-  document.getElementById("pic_1").src = PicturesArray[randIndeces[1]].picture;
-  document.getElementById("description_1").innerHTML = PicturesArray[randIndeces[1]].description;
-  document.getElementById("pic_2").src = PicturesArray[randIndeces[2]].picture;
-  document.getElementById("description_2").innerHTML = PicturesArray[randIndeces[2]].description;
-  document.getElementById("pic_3").src = PicturesArray[randIndeces[3]].picture;
-  document.getElementById("description_3").innerHTML = PicturesArray[randIndeces[3]].description;
-
+  for (var i = 0; i < length; i++) {
+    var randIndex = randIndeces[i];
+    document.getElementById("pic_" + i).src = PicturesArray[randIndex].picture;
+    document.getElementById("description_" + i).innerHTML = PicturesArray[randIndex].description;
+  }
   //determine a random keyword which the user has to find
   var keyword;
   indexKeyword = Math.floor(Math.random() * (length));
@@ -151,7 +163,38 @@ function appearanceCourseMain()
 }
 
 //-------------------------- Functions Vocabular -------------------------------
+function BuildVocabulary()
+{
+  //Choose a random German word
+  var randomCourse = Math.floor(Math.random() * 3);
+  var randomIndex = Math.floor(Math.random() * 4);
+  var randomPicArray = [];
+  switch (randomCourse) {
+    case 0:
+      randomPicArray = BuildCourse1(true);
+      break;
+    case 1:
+      randomPicArray = BuildCourse2(true);
+      break;
+    case 2:
+      randomPicArray = BuildCourse3(true);
+      break;
+    default:
+      break; }
+  var RandomVocable = randomPicArray[randomIndex].description;
+  RandomVocableENG = randomPicArray[randomIndex].descriptionENG;
+  document.getElementById("GermanVocable").innerHTML = RandomVocable;
 
+}
+function checkAnswer() {
+  var AnswerTranslation = document.getElementById("Translation").value;
+  if (RandomVocableENG == AnswerTranslation) {
+    console.log("JAA MANN!!");
+  }
+  else {
+    console.log("NEE MANN" + RandomVocableENG +AnswerTranslation);
+  }
+}
 
 //------------------------------ Subroutines -----------------------------------
 //creates an array with UNIQUE random numbers 0 to length
