@@ -6,7 +6,8 @@ var randomIndexOld;
 var correctVocables = 0;
 var totalVocables = 0;
 
-function BuildCourse1(x)
+//All used pictures are courtesy of pixabay.com!
+function BuildCourse1(readOnly)
 {
   PicturesArray = [
     {description: '"Die Frau"',
@@ -26,14 +27,14 @@ function BuildCourse1(x)
      picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
    }
   ];
-  if (x) {
+  if (readOnly) {
     return PicturesArray;
   }
   else {
     randPics();     //next step
   }
 }
-function BuildCourse2(x)
+function BuildCourse2(readOnly)
 {
   PicturesArray = [
     {description: '"Das Brot"',
@@ -53,14 +54,14 @@ function BuildCourse2(x)
      picture: "https://cdn.pixabay.com/photo/2016/03/05/23/02/background-1239436__340.jpg"
    }
   ];
-  if (x) {
+  if (readOnly) {
     return PicturesArray;
   }
   else {
     randPics();     //next step
   }
 }
-function BuildCourse3(x)
+function BuildCourse3(readOnly)
 {
   PicturesArray = [
     {description: '"Guten Tag"',
@@ -80,7 +81,7 @@ function BuildCourse3(x)
      picture: "https://cdn.pixabay.com/photo/2016/11/22/18/49/animal-1850002__340.jpg"
    }
   ];
-  if (x) {
+  if (readOnly) {
     return PicturesArray;
   }
   else {
@@ -148,19 +149,16 @@ function appearanceCourseMain()
   var result1 = getCookie("course1");
   var result2 = getCookie("course2");
   var result3 = getCookie("course3");
-  console.log("cookies: " + result1 + result2 + result3 );
   if (result1 == "1" && result2 == "1" && result3 == "1")  {
     setCookie("course1", 0, 9);
     setCookie("course2", 0, 9);
     setCookie("course3", 0, 9);
     document.getElementById("divAfterTest").style.visibility = "visible";
     document.getElementById("divBeforeTest").style.visibility = "hidden";
-    console.log("all cookies true");
   }
   else {
     document.getElementById("divAfterTest").style.visibility = "hidden";
     document.getElementById("divBeforeTest").style.visibility = "visible";
-    console.log("else zweig");
   }
 }
 
