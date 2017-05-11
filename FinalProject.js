@@ -2,7 +2,9 @@
 var indexKeyword;
 var randIndeces;
 var PicturesArray = [];
-var RandomVocableENG
+var randomIndexOld;
+var correctVocables = 0;
+var totalVocables = 0;
 
 function BuildCourse1(x)
 {
@@ -146,7 +148,7 @@ function appearanceCourseMain()
   var result1 = getCookie("course1");
   var result2 = getCookie("course2");
   var result3 = getCookie("course3");
-  console.log(result1);
+  console.log("cookies: " + result1 + result2 + result3 );
   if (result1 == "1" && result2 == "1" && result3 == "1")  {
     setCookie("course1", 0, 9);
     setCookie("course2", 0, 9);
@@ -167,7 +169,13 @@ function BuildVocabulary()
 {
   //Choose a random German word
   var randomCourse = Math.floor(Math.random() * 3);
-  var randomIndex = Math.floor(Math.random() * 4);
+  var randomIndex;
+  document.getElementById("hiddenMessage").style.visibility = "hidden";
+  document.getElementById("Translation").value = "";
+  do {
+    randomIndex = Math.floor(Math.random() * 4);
+  } while (randomIndexOld == randomIndex);
+  randomIndexOld = randomIndex;
   var randomPicArray = [];
   switch (randomCourse) {
     case 0:
@@ -183,16 +191,33 @@ function BuildVocabulary()
       break; }
   var RandomVocable = randomPicArray[randomIndex].description;
   RandomVocableENG = randomPicArray[randomIndex].descriptionENG;
+  var VocLength = RandomVocableENG.length;
+  RandomVocableENG = RandomVocableENG.slice(1,(VocLength-1));         //delete ""
   document.getElementById("GermanVocable").innerHTML = RandomVocable;
-
 }
-function checkAnswer() {
+
+function checkAnswerVoc() {
   var AnswerTranslation = document.getElementById("Translation").value;
+  AnswerTranslation = AnswerTranslation.toLowerCase();
+  RandomVocableENG = RandomVocableENG.toLowerCase();
   if (RandomVocableENG == AnswerTranslation) {
-    console.log("JAA MANN!!");
+    document.getElementById("hiddenMessage").innerHTML = "Correct! Loading next vocable...";
+    document.getElementById("hiddenMessage").style.color = "green";
+    document.getElementById("hiddenMessage").style.visibility = "visible";
+    correctVocables++;
+    totalVocables++;
+    document.getElementById("totalCorrect").innerHTML = correctVocables;
+    document.getElementById("totalVocables").innerHTML = totalVocables;
+    Timer = setTimeout("BuildVocabulary()", 2000);
   }
   else {
-    console.log("NEE MANN" + RandomVocableENG +AnswerTranslation);
+    console.log("Hey, the answer is " + RandomVocableENG + " , not " + AnswerTranslation);
+    document.getElementById("hiddenMessage").innerHTML = "Wrong! Try the next vocable...";
+    document.getElementById("hiddenMessage").style.color = "red";
+    document.getElementById("hiddenMessage").style.visibility = "visible";
+    totalVocables++;
+    document.getElementById("totalVocables").innerHTML = totalVocables;
+    Timer = setTimeout("BuildVocabulary()", 2000);
   }
 }
 

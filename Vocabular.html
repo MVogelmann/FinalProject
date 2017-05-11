@@ -60,12 +60,23 @@
             <div class="input-group">
               <input type="text" class="form-control" id="Translation" placeholder="Your translation...">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button" onclick="checkAnswer()">Check!</button>
+                <button class="btn btn-default" type="button" onclick="checkAnswerVoc()">Check!</button>
               </span>
             </div>
           </td>
         </tr>
       </table>
+      <div id="hiddenMessage">
+      </div>
+      <div class="Result">
+        <p>
+          You translated
+          <span id="totalCorrect">0</span>
+          of
+          <span id="totalVocables">0</span>
+          vocables correctly.
+        </p>
+      </div>
     </div>
   </body>
 </html>

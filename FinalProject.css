@@ -171,3 +171,14 @@ td {
   border-style: groove;
   background-color: white;
 }
+#hiddenMessage {
+  visibility: hidden;
+  text-align: center;
+  font-size: 150%;
+}
+div.Result {
+  margin-top: 50px;
+}
+div.Result span {
+  font-weight: bold;
+}
