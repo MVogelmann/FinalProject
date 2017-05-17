@@ -136,12 +136,12 @@ function checkAnswer(level)
 
 function Continue(level)
 {
-  window.location = "course" + level + ".html";
+  window.location = "Course" + level + ".html";
 }
 
 function TryAgain(level)
 {
-  window.location = "course" + level + ".html";
+  window.location = "Course" + level + ".html";
 }
 
 function appearanceCourseMain()
