@@ -12,19 +12,19 @@ function BuildCourse1(readOnly)
   PicturesArray = [
     {description: '"Die Frau"',
      descriptionENG: '"the woman"',
-     picture: "https://cdn.pixabay.com/photo/2012/02/29/15/40/beautiful-19075_960_720.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/beautiful-19075_960_720.jpg"
     },
     {description: '"Der Mann"',
      descriptionENG: '"the man"',
-     picture: "https://cdn.pixabay.com/photo/2016/11/03/16/43/cuba-1795091__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/cuba-1795091__340.jpg"
     },
     {description: '"Der Junge"',
      descriptionENG: '"the boy"',
-     picture: "https://cdn.pixabay.com/photo/2016/03/12/21/05/boy-1252771__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/boy-1252771__340.jpg"
     },
     {description: '"Das Mädchen"',
      descriptionENG: '"the girl"',
-     picture: "https://cdn.pixabay.com/photo/2014/03/01/18/33/the-little-girl-277697__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/the-little-girl-277697__340.jpg"
    }
   ];
   if (readOnly) {
@@ -39,19 +39,19 @@ function BuildCourse2(readOnly)
   PicturesArray = [
     {description: '"Das Brot"',
      descriptionENG: '"the bread"',
-     picture: "https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/bread-399286__340.jpg"
     },
     {description: '"Der Kaffee"',
      descriptionENG: '"the coffee"',
-     picture: "https://cdn.pixabay.com/photo/2014/07/08/12/58/coffee-386878__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/coffee-386878__340.jpg"
     },
     {description: '"Der Tee"',
      descriptionENG: '"the tea"',
-     picture: "https://cdn.pixabay.com/photo/2017/02/20/09/05/tea-2081920__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/tea-2081920__340.jpg"
     },
     {description: '"Die Früchte"',
      descriptionENG: '"the fruits"',
-     picture: "https://cdn.pixabay.com/photo/2016/03/05/23/02/background-1239436__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/background-1239436__340.jpg"
    }
   ];
   if (readOnly) {
@@ -66,19 +66,19 @@ function BuildCourse3(readOnly)
   PicturesArray = [
     {description: '"Guten Tag"',
      descriptionENG: '"hello"',
-     picture: "https://cdn.pixabay.com/photo/2017/05/05/09/49/agreement-2286439__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/agreement-2286439__340.jpg"
     },
     {description: '"Auf Wiedersehen"',
      descriptionENG: '"goodbye"',
-     picture: "https://cdn.pixabay.com/photo/2015/01/10/15/53/child-waving-goodbye-595429__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/child-waving-goodbye-595429__340.jpg"
     },
     {description: '"Die Katze"',
      descriptionENG: '"the cat"',
-     picture: "https://cdn.pixabay.com/photo/2014/07/24/18/40/cat-401124__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/cat-401124__340.jpg"
     },
     {description: '"Der Hund"',
      descriptionENG: '"the dog"',
-     picture: "https://cdn.pixabay.com/photo/2016/11/22/18/49/animal-1850002__340.jpg"
+     picture: "https://raw.githubusercontent.com/MVogelmann/FinalProject/master/animal-1850002__340.jpg"
    }
   ];
   if (readOnly) {
